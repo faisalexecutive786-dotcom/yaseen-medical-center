@@ -3,331 +3,1009 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Yaseen Medical Center - Professional healthcare services with compassionate care. 24/7 Emergency Care, Expert Medical Team, Modern Facilities.">
-    <meta name="keywords" content="medical center, healthcare, gynecology, physiotherapy, pediatrician, ultrasound, general physician, surgery, ophthalmologist">
-    <meta name="author" content="Yaseen Medical Center">
-    <title>Yaseen Medical Center - Caring for You, 24/7</title>
-    
-    <!-- SEO and Social Media Meta Tags -->
-    <meta property="og:title" content="Yaseen Medical Center - Professional Healthcare Services">
-    <meta property="og:description" content="Comprehensive healthcare services with compassionate care. Expert medical team available 24/7.">
-    <meta property="og:type" content="website">
-    <meta name="twitter:card" content="summary_large_image">
-    
-    <!-- Preconnect for performance -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Yaseen Medical Center - Your Health is Our Concern | 24/7 Medical Services</title>
+    <meta name="description" content="Yaseen Medical Center provides 24/7 comprehensive healthcare services including Gynecology, Physiotherapy, Pediatrician, Ultrasound, General Physician, General Surgery, and Ophthalmology.">
+    <meta name="keywords" content="Medical Center, Healthcare, 24/7 Emergency, Gynecology, Physiotherapy, Pediatrician, Ultrasound, General Surgery, Ophthalmology, Dharampura">
     
     <!-- Font Awesome for Icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/responsive.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
     
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            overflow-x: hidden;
+        }
+        
+        /* Luxury Color Palette */
+        :root {
+            --primary-blue: #4A90E2;
+            --secondary-blue: #2C5AA0;
+            --accent-green: #00D4AA;
+            --luxury-gold: #D4AF37;
+            --deep-navy: #1B365D;
+            --soft-gray: #F8F9FA;
+            --white: #FFFFFF;
+            --gradient-primary: linear-gradient(135deg, #4A90E2 0%, #2C5AA0 100%);
+            --gradient-accent: linear-gradient(135deg, #00D4AA 0%, #4A90E2 100%);
+        }
+        
+        /* Running Announcement Bar */
+        .announcement-bar {
+            background: var(--gradient-primary);
+            color: white;
+            padding: 10px 0;
+            overflow: hidden;
+            position: relative;
+            font-weight: 500;
+        }
+        
+        .announcement-content {
+            display: flex;
+            animation: scroll-left 20s linear infinite;
+            white-space: nowrap;
+        }
+        
+        .announcement-text {
+            padding-right: 50px;
+        }
+        
+        @keyframes scroll-left {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+        
+        /* Header Styles */
+        .header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary-blue);
+            text-decoration: none;
+        }
+        
+        .logo i {
+            margin-right: 10px;
+            color: var(--accent-green);
+            font-size: 2rem;
+        }
+        
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+        
+        .nav-menu a {
+            text-decoration: none;
+            color: var(--deep-navy);
+            font-weight: 500;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .nav-menu a:hover {
+            color: var(--primary-blue);
+        }
+        
+        .nav-menu a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--accent-green);
+            transition: width 0.3s ease;
+        }
+        
+        .nav-menu a:hover::after {
+            width: 100%;
+        }
+        
+        /* Mobile Menu Toggle */
+        .mobile-toggle {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+        
+        .mobile-toggle span {
+            width: 25px;
+            height: 3px;
+            background: var(--primary-blue);
+            margin: 3px 0;
+            transition: 0.3s;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, rgba(74, 144, 226, 0.9), rgba(44, 90, 160, 0.9)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><rect fill="%23f0f8ff" width="1200" height="800"/><circle fill="%23e6f3ff" cx="200" cy="200" r="100"/><circle fill="%23cce7ff" cx="600" cy="300" r="150"/><circle fill="%23b3dbff" cx="1000" cy="400" r="120"/></svg>');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            padding: 2rem;
+            animation: fadeInUp 1s ease-out;
+        }
+        
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+        
+        .hero .subtitle {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            padding: 15px 30px;
+            border: none;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+        
+        .btn-primary {
+            background: var(--accent-green);
+            color: white;
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+        
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        /* Floating Elements Animation */
+        .floating-element {
+            position: absolute;
+            opacity: 0.1;
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        .floating-element:nth-child(1) {
+            top: 20%;
+            left: 10%;
+            animation-delay: 0s;
+        }
+        
+        .floating-element:nth-child(2) {
+            top: 60%;
+            right: 10%;
+            animation-delay: 2s;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* Services Section */
+        .services {
+            padding: 100px 0;
+            background: var(--soft-gray);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .section-header h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: var(--deep-navy);
+            margin-bottom: 1rem;
+        }
+        
+        .section-header p {
+            font-size: 1.1rem;
+            color: #666;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .service-card {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--gradient-accent);
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+        }
+        
+        .service-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--gradient-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            color: white;
+            font-size: 2rem;
+        }
+        
+        .service-card h3 {
+            font-size: 1.3rem;
+            color: var(--deep-navy);
+            margin-bottom: 15px;
+        }
+        
+        .service-card p {
+            color: #666;
+            line-height: 1.6;
+        }
+        
+        /* About Section */
+        .about {
+            padding: 100px 0;
+            background: white;
+        }
+        
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+        
+        .about-text h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: var(--deep-navy);
+            margin-bottom: 20px;
+        }
+        
+        .about-text p {
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
+        
+        .features-list {
+            list-style: none;
+            margin: 30px 0;
+        }
+        
+        .features-list li {
+            padding: 10px 0;
+            display: flex;
+            align-items: center;
+        }
+        
+        .features-list i {
+            color: var(--accent-green);
+            margin-right: 15px;
+            font-size: 1.2rem;
+        }
+        
+        .about-image {
+            position: relative;
+        }
+        
+        .about-image img {
+            width: 100%;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Emergency Section */
+        .emergency {
+            background: var(--gradient-primary);
+            color: white;
+            text-align: center;
+            padding: 80px 0;
+        }
+        
+        .emergency h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        
+        .emergency p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+        
+        .emergency-contact {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px 30px;
+            border-radius: 50px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .contact-item i {
+            font-size: 1.5rem;
+            color: var(--accent-green);
+        }
+        
+        /* Testimonials Section */
+        .testimonials {
+            padding: 100px 0;
+            background: var(--soft-gray);
+        }
+        
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+        
+        .testimonial-card {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+        
+        .testimonial-card::before {
+            content: '"';
+            position: absolute;
+            top: 20px;
+            left: 30px;
+            font-size: 4rem;
+            color: var(--accent-green);
+            opacity: 0.3;
+            font-family: serif;
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 20px;
+            color: #666;
+            line-height: 1.8;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: var(--gradient-primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 600;
+        }
+        
+        /* Contact Section */
+        .contact {
+            padding: 100px 0;
+            background: white;
+        }
+        
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+        }
+        
+        .contact-form {
+            background: var(--soft-gray);
+            padding: 40px;
+            border-radius: 20px;
+        }
+        
+        .form-group {
+            margin-bottom: 25px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: var(--deep-navy);
+        }
+        
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 15px;
+            border: none;
+            border-radius: 10px;
+            background: white;
+            font-family: 'Poppins', sans-serif;
+            border: 2px solid transparent;
+            transition: all 0.3s ease;
+        }
+        
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary-blue);
+            box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.1);
+        }
+        
+        .contact-info h3 {
+            color: var(--deep-navy);
+            margin-bottom: 30px;
+            font-size: 1.5rem;
+        }
+        
+        .info-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+        
+        .info-item i {
+            color: var(--primary-blue);
+            font-size: 1.2rem;
+            margin-top: 5px;
+        }
+        
+        .info-item div h4 {
+            color: var(--deep-navy);
+            margin-bottom: 5px;
+        }
+        
+        .info-item div p {
+            color: #666;
+            margin: 0;
+        }
+        
+        /* Social Media Icons */
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 30px;
+        }
+        
+        .social-link {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .social-link.facebook { background: #1877F2; }
+        .social-link.instagram { background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); }
+        .social-link.youtube { background: #FF0000; }
+        .social-link.tiktok { background: #000000; }
+        
+        .social-link:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+        
+        /* Map Section */
+        .map-section {
+            height: 400px;
+            background: var(--soft-gray);
+            position: relative;
+        }
+        
+        .map-placeholder {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            color: var(--deep-navy);
+        }
+        
+        /* Footer */
+        .footer {
+            background: var(--deep-navy);
+            color: white;
+            padding: 60px 0 30px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-section h3 {
+            margin-bottom: 20px;
+            color: var(--accent-green);
+        }
+        
+        .footer-section p,
+        .footer-section li {
+            margin-bottom: 10px;
+            opacity: 0.9;
+        }
+        
+        .footer-section ul {
+            list-style: none;
+        }
+        
+        .footer-section a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-section a:hover {
+            color: var(--accent-green);
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            opacity: 0.8;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+            }
+            
+            .mobile-toggle {
+                display: flex;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero .subtitle {
+                font-size: 1rem;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .about-content,
+            .contact-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            .emergency-contact {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .section-header h2 {
+                font-size: 2rem;
+            }
+            
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .nav-container {
+                padding: 0.5rem;
+            }
+            
+            .logo {
+                font-size: 1.4rem;
+            }
+            
+            .service-card,
+            .testimonial-card,
+            .contact-form {
+                padding: 30px 20px;
+            }
+        }
+        
+        /* Scroll Animations */
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
+        }
+        
+        .fade-in-up.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* WhatsApp Floating Button */
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 40px;
+            right: 40px;
+            background-color: #25d366;
+            color: white;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 3px #999;
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .whatsapp-float:hover {
+            background-color: #128C7E;
+            transform: scale(1.1);
+        }
+    </style>
 </head>
 <body>
+    <!-- Running Announcement Bar -->
+    <div class="announcement-bar">
+        <div class="announcement-content">
+            <span class="announcement-text">🏥 24/7 Emergency Services Available • 📞 Book Appointment via WhatsApp: 03055082811 • 🩺 Comprehensive Healthcare Services • 📍 Located at Allama Iqbal Road, Dharampura</span>
+            <span class="announcement-text">🏥 24/7 Emergency Services Available • 📞 Book Appointment via WhatsApp: 03055082811 • 🩺 Comprehensive Healthcare Services • 📍 Located at Allama Iqbal Road, Dharampura</span>
+        </div>
+    </div>
+
     <!-- Header -->
-    <header class="header" id="header">
-        <nav class="navbar">
-            <div class="nav-container">
-                <!-- Logo -->
-                <div class="nav-logo">
-                    <img src="images/logo.png" alt="Yaseen Medical Center Logo" class="logo-img">
-                    <span class="logo-text">Yaseen Medical Center</span>
-                </div>
-                
-                <!-- Navigation Menu -->
-                <ul class="nav-menu" id="nav-menu">
-                    <li class="nav-item">
-                        <a href="#home" class="nav-link">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#services" class="nav-link">Services</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#about" class="nav-link">About Us</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#contact" class="nav-link">Contact</a>
-                    </li>
-                </ul>
-                
-                <!-- WhatsApp Button -->
-                <div class="nav-actions">
-                    <a href="https://wa.me/923055082811" class="whatsapp-btn" target="_blank" rel="noopener noreferrer" aria-label="Contact us on WhatsApp">
-                        <i class="fab fa-whatsapp"></i>
-                        <span class="whatsapp-text">WhatsApp</span>
-                    </a>
-                    
-                    <!-- Mobile Menu Toggle -->
-                    <div class="nav-toggle" id="nav-toggle">
-                        <span class="bar"></span>
-                        <span class="bar"></span>
-                        <span class="bar"></span>
-                    </div>
-                </div>
+    <header class="header">
+        <nav class="nav-container">
+            <a href="#home" class="logo">
+                <i class="fas fa-heartbeat"></i>
+                Yaseen Medical Center
+            </a>
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#testimonials">Reviews</a></li>
+            </ul>
+            <div class="mobile-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
         </nav>
     </header>
 
     <!-- Hero Section -->
-    <section class="hero" id="home">
-        <div class="hero-slider">
-            <!-- Hero Slide 1 -->
-            <div class="hero-slide active">
-                <img src="images/hero-1.jpg" alt="Modern medical facility exterior" class="hero-bg">
-                <div class="hero-overlay"></div>
-                <div class="hero-content">
-                    <div class="container">
-                        <h1 class="hero-title">Caring for You, 24/7</h1>
-                        <p class="hero-subtitle">Professional healthcare services with compassionate care.</p>
-                        <a href="#contact" class="cta-btn">
-                            <i class="fas fa-calendar-check"></i>
-                            Book Appointment
-                        </a>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Hero Slide 2 -->
-            <div class="hero-slide">
-                <img src="images/hero-2.jpg" alt="Medical team providing care" class="hero-bg">
-                <div class="hero-overlay"></div>
-                <div class="hero-content">
-                    <div class="container">
-                        <h1 class="hero-title">Expert Medical Team</h1>
-                        <p class="hero-subtitle">Experienced physicians dedicated to your health and wellbeing.</p>
-                        <a href="#services" class="cta-btn">
-                            <i class="fas fa-stethoscope"></i>
-                            Our Services
-                        </a>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Hero Slide 3 -->
-            <div class="hero-slide">
-                <img src="images/hero-3.jpg" alt="Modern medical equipment" class="hero-bg">
-                <div class="hero-overlay"></div>
-                <div class="hero-content">
-                    <div class="container">
-                        <h1 class="hero-title">Modern Facilities</h1>
-                        <p class="hero-subtitle">State-of-the-art equipment for accurate diagnosis and treatment.</p>
-                        <a href="#about" class="cta-btn">
-                            <i class="fas fa-info-circle"></i>
-                            Learn More
-                        </a>
-                    </div>
-                </div>
-            </div>
+    <section id="home" class="hero">
+        <div class="floating-element">
+            <i class="fas fa-stethoscope" style="font-size: 100px;"></i>
+        </div>
+        <div class="floating-element">
+            <i class="fas fa-heartbeat" style="font-size: 80px;"></i>
         </div>
         
-        <!-- Hero Navigation Dots -->
-        <div class="hero-dots">
-            <span class="dot active" data-slide="0"></span>
-            <span class="dot" data-slide="1"></span>
-            <span class="dot" data-slide="2"></span>
-        </div>
-        
-        <!-- Scroll Down Indicator -->
-        <div class="scroll-indicator">
-            <a href="#services" class="scroll-down" aria-label="Scroll to services section">
-                <i class="fas fa-chevron-down"></i>
-            </a>
+        <div class="hero-content">
+            <h1>Your Health is Our Concern</h1>
+            <p class="subtitle">Providing world-class medical care with advanced technology and experienced professionals. Available 24/7 for your healthcare needs.</p>
+            <div class="cta-buttons">
+                <a href="https://wa.me/923055082811" class="btn btn-primary">
+                    <i class="fab fa-whatsapp"></i>
+                    Book Appointment
+                </a>
+                <a href="#services" class="btn btn-secondary">
+                    <i class="fas fa-stethoscope"></i>
+                    Our Services
+                </a>
+            </div>
         </div>
     </section>
 
     <!-- Services Section -->
-    <section class="services" id="services">
+    <section id="services" class="services">
         <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Our Medical Services</h2>
-                <p class="section-subtitle">Comprehensive healthcare services to meet all your medical needs</p>
+            <div class="section-header fade-in-up">
+                <h2>Our Medical Services</h2>
+                <p>Comprehensive healthcare services provided by experienced medical professionals with state-of-the-art equipment and technology.</p>
             </div>
             
             <div class="services-grid">
-                <!-- Gynecology -->
-                <div class="service-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="service-image">
-                        <img src="images/gynecology.jpg" alt="Gynecology services" loading="lazy">
-                        <div class="service-overlay">
-                            <i class="fas fa-female"></i>
-                        </div>
+                <div class="service-card fade-in-up">
+                    <div class="service-icon">
+                        <i class="fas fa-female"></i>
                     </div>
-                    <div class="service-content">
-                        <h3 class="service-title">Gynecology</h3>
-                        <p class="service-description">Comprehensive women's health care.</p>
-                        <a href="#contact" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                    <h3>Gynecology</h3>
+                    <p>Comprehensive women's health services including routine check-ups, prenatal care, and specialized gynecological treatments.</p>
+                </div>
+                
+                <div class="service-card fade-in-up">
+                    <div class="service-icon">
+                        <i class="fas fa-walking"></i>
+                    </div>
+                    <h3>Physiotherapy</h3>
+                    <p>Professional rehabilitation services to help you recover from injuries, manage pain, and improve mobility and strength.</p>
+                </div>
+                
+                <div class="service-card fade-in-up">
+                    <div class="service-icon">
+                        <i class="fas fa-baby"></i>
+                    </div>
+                    <h3>Pediatrician</h3>
+                    <p>Specialized medical care for infants, children, and adolescents, focusing on their physical, emotional, and social health.</p>
+                </div>
+                
+                <div class="service-card fade-in-up">
+                    <div class="service-icon">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <h3>Ultrasound</h3>
+                    <p>Advanced diagnostic imaging services using state-of-the-art ultrasound technology for accurate medical assessments.</p>
+                </div>
+                
+                <div class="service-card fade-in-up">
+                    <div class="service-icon">
+                        <i class="fas fa-user-md"></i>
+                    </div>
+                    <h3>General Physician</h3>
+                    <p>Primary healthcare services including routine check-ups, health screenings, and treatment of common medical conditions.</p>
+                </div>
+                
+                <div class="service-card fade-in-up">
+                    <div class="service-icon">
+                        <i class="fas fa-cut"></i>
+                    </div>
+                    <h3>General Surgery</h3>
+                    <p>Surgical procedures performed by experienced surgeons using modern techniques and equipment in a safe environment.</p>
+                </div>
+                
+                <div class="service-card fade-in-up">
+                    <div class="service-icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <h3>Ophthalmology</h3>
+                    <p>Comprehensive eye care services including eye examinations, vision testing, and treatment of eye-related conditions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text fade-in-up">
+                    <h2>Welcome to Yaseen Medical Center</h2>
+                    <p>At Yaseen Medical Center, we are committed to providing exceptional healthcare services to our community. With our state-of-the-art facilities and experienced medical professionals, we ensure that your health remains our top priority.</p>
+                    
+                    <p>Our comprehensive approach to healthcare combines advanced medical technology with compassionate care, ensuring that each patient receives personalized treatment tailored to their specific needs.</p>
+                    
+                    <ul class="features-list">
+                        <li><i class="fas fa-check-circle"></i> 24/7 Emergency Services</li>
+                        <li><i class="fas fa-check-circle"></i> Experienced Medical Professionals</li>
+                        <li><i class="fas fa-check-circle"></i> State-of-the-art Equipment</li>
+                        <li><i class="fas fa-check-circle"></i> Comprehensive Healthcare Services</li>
+                        <li><i class="fas fa-check-circle"></i> Patient-Centered Care Approach</li>
+                    </ul>
+                    
+                    <a href="#contact" class="btn btn-primary">
+                        <i class="fas fa-calendar-alt"></i>
+                        Schedule Consultation
+                    </a>
+                </div>
+                
+                <div class="about-image fade-in-up">
+                    <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Medical Team at Yaseen Medical Center">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Emergency Section -->
+    <section class="emergency">
+        <div class="container">
+            <h2>24/7 Emergency Care Available</h2>
+            <p>Professional care, wherever you need it. Our emergency services are always ready to provide immediate medical attention when you need it most.</p>
+            
+            <div class="emergency-contact">
+                <div class="contact-item">
+                    <i class="fas fa-phone-alt"></i>
+                    <div>
+                        <strong>Emergency Hotline</strong><br>
+                        Available 24/7
                     </div>
                 </div>
                 
-                <!-- Physiotherapy -->
-                <div class="service-card" data-aos="fade-up" data-aos-delay="200">
-                    <div class="service-image">
-                        <img src="images/physiotherapy.jpg" alt="Physiotherapy services" loading="lazy">
-                        <div class="service-overlay">
-                            <i class="fas fa-dumbbell"></i>
-                        </div>
-                    </div>
-                    <div class="service-content">
-                        <h3 class="service-title">Physiotherapy</h3>
-                        <p class="service-description">Rehabilitation and strength recovery.</p>
-                        <a href="#contact" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                <div class="contact-item">
+                    <i class="fab fa-whatsapp"></i>
+                    <div>
+                        <strong>WhatsApp</strong><br>
+                        03055082811
                     </div>
                 </div>
                 
-                <!-- Pediatrician -->
-                <div class="service-card" data-aos="fade-up" data-aos-delay="300">
-                    <div class="service-image">
-                        <img src="images/pediatrician.jpg" alt="Pediatric care services" loading="lazy">
-                        <div class="service-overlay">
-                            <i class="fas fa-baby"></i>
-                        </div>
-                    </div>
-                    <div class="service-content">
-                        <h3 class="service-title">Pediatrician</h3>
-                        <p class="service-description">Expert healthcare for children.</p>
-                        <a href="#contact" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-                
-                <!-- Ultrasound -->
-                <div class="service-card" data-aos="fade-up" data-aos-delay="400">
-                    <div class="service-image">
-                        <img src="images/ultrasound.jpg" alt="Ultrasound imaging services" loading="lazy">
-                        <div class="service-overlay">
-                            <i class="fas fa-search"></i>
-                        </div>
-                    </div>
-                    <div class="service-content">
-                        <h3 class="service-title">Ultrasound</h3>
-                        <p class="service-description">Accurate and advanced imaging.</p>
-                        <a href="#contact" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-                
-                <!-- General Physician -->
-                <div class="service-card" data-aos="fade-up" data-aos-delay="500">
-                    <div class="service-image">
-                        <img src="images/general-physician.jpg" alt="General physician services" loading="lazy">
-                        <div class="service-overlay">
-                            <i class="fas fa-user-md"></i>
-                        </div>
-                    </div>
-                    <div class="service-content">
-                        <h3 class="service-title">General Physician</h3>
-                        <p class="service-description">Personalized medical attention.</p>
-                        <a href="#contact" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-                
-                <!-- General Surgery -->
-                <div class="service-card" data-aos="fade-up" data-aos-delay="600">
-                    <div class="service-image">
-                        <img src="images/general-surgery.jpg" alt="General surgery services" loading="lazy">
-                        <div class="service-overlay">
-                            <i class="fas fa-cut"></i>
-                        </div>
-                    </div>
-                    <div class="service-content">
-                        <h3 class="service-title">General Surgery</h3>
-                        <p class="service-description">Expert surgical procedures.</p>
-                        <a href="#contact" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-                
-                <!-- Ophthalmologist -->
-                <div class="service-card" data-aos="fade-up" data-aos-delay="700">
-                    <div class="service-image">
-                        <img src="images/ophthalmologist.jpg" alt="Eye care services" loading="lazy">
-                        <div class="service-overlay">
-                            <i class="fas fa-eye"></i>
-                        </div>
-                    </div>
-                    <div class="service-content">
-                        <h3 class="service-title">Ophthalmologist</h3>
-                        <p class="service-description">Complete eye care solutions.</p>
-                        <a href="#contact" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                <div class="contact-item">
+                    <i class="fas fa-ambulance"></i>
+                    <div>
+                        <strong>Ambulance Service</strong><br>
+                        Rapid Response
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- About Us Section -->
-    <section class="about" id="about">
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
         <div class="container">
-            <div class="about-content">
-                <div class="about-text" data-aos="fade-right">
-                    <h2 class="section-title">About Yaseen Medical Center</h2>
-                    <p class="about-description">
-                        Yaseen Medical Center is committed to delivering compassionate, high-quality healthcare for families. 
-                        Our experienced physicians and modern facilities ensure the best treatment for all patients.
-                    </p>
-                    
-                    <div class="about-features">
-                        <div class="feature-item">
-                            <div class="feature-icon">
-                                <i class="fas fa-clock"></i>
-                            </div>
-                            <div class="feature-content">
-                                <h3>24/7 Emergency Care</h3>
-                                <p>Round-the-clock emergency medical services</p>
-                            </div>
-                        </div>
-                        
-                        <div class="feature-item">
-                            <div class="feature-icon">
-                                <i class="fas fa-user-md"></i>
-                            </div>
-                            <div class="feature-content">
-                                <h3>Expert Medical Team</h3>
-                                <p>Highly qualified and experienced doctors</p>
-                            </div>
-                        </div>
-                        
-                        <div class="feature-item">
-                            <div class="feature-icon">
-                                <i class="fas fa-hospital"></i>
-                            </div>
-                            <div class="feature-content">
-                                <h3>Modern Facilities</h3>
-                                <p>State-of-the-art medical equipment</p>
-                            </div>
-                        </div>
-                        
-                        <div class="feature-item">
-                            <div class="feature-icon">
-                                <i class="fas fa-heart"></i>
-                            </div>
-                            <div class="feature-content">
-                                <h3>Compassionate Care</h3>
-                                <p>Personalized attention for every patient</p>
-                            </div>
+            <div class="section-header fade-in-up">
+                <h2>Patient Testimonials</h2>
+                <p>Hear what our patients have to say about their experience with our healthcare services.</p>
+            </div>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card fade-in-up">
+                    <div class="testimonial-text">
+                        The medical staff at Yaseen Medical Center provided exceptional care during my treatment. Their professionalism and compassionate approach made all the difference in my recovery.
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">A</div>
+                        <div>
+                            <strong>Ahmed Khan</strong><br>
+                            <small>Patient</small>
                         </div>
                     </div>
                 </div>
                 
-                <div class="about-image" data-aos="fade-left">
-                    <img src="images/about-us.jpg" alt="About Yaseen Medical Center" loading="lazy">
-                    <div class="about-stats">
-                        <div class="stat-item">
-                            <div class="stat-number">1000+</div>
-                            <div class="stat-label">Happy Patients</div>
+                <div class="testimonial-card fade-in-up">
+                    <div class="testimonial-text">
+                        I was impressed by the modern facilities and the expertise of the doctors. The 24/7 availability gave me peace of mind knowing that quality healthcare is always accessible.
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">F</div>
+                        <div>
+                            <strong>Fatima Ali</strong><br>
+                            <small>Patient</small>
                         </div>
-                        <div class="stat-item">
-                            <div class="stat-number">10+</div>
-                            <div class="stat-label">Expert Doctors</div>
-                        </div>
-                        <div class="stat-item">
-                            <div class="stat-number">7</div>
-                            <div class="stat-label">Medical Services</div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card fade-in-up">
+                    <div class="testimonial-text">
+                        The physiotherapy services helped me recover faster than expected. The therapists were knowledgeable and created a personalized treatment plan that worked perfectly for my needs.
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">M</div>
+                        <div>
+                            <strong>Muhammad Hassan</strong><br>
+                            <small>Patient</small>
                         </div>
                     </div>
                 </div>
@@ -336,92 +1014,114 @@
     </section>
 
     <!-- Contact Section -->
-    <section class="contact" id="contact">
+    <section id="contact" class="contact">
         <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Contact Us</h2>
-                <p class="section-subtitle">Get in touch with us for appointments and inquiries</p>
+            <div class="section-header fade-in-up">
+                <h2>Get in Touch</h2>
+                <p>Contact us for appointments, inquiries, or emergency medical services. We're here to help you 24/7.</p>
             </div>
             
             <div class="contact-content">
-                <div class="contact-info" data-aos="fade-right">
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h3>Address</h3>
-                            <p>246-Allama Iqbal Road, Yaseen Medical Center, Dharampura</p>
-                        </div>
-                    </div>
-                    
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fab fa-whatsapp"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h3>WhatsApp</h3>
-                            <p>
-                                <a href="https://wa.me/923055082811" target="_blank" rel="noopener noreferrer">
-                                    03055082811
-                                </a>
-                            </p>
-                        </div>
-                    </div>
-                    
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-clock"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h3>Working Hours</h3>
-                            <p>24/7 Emergency Care Available</p>
-                        </div>
-                    </div>
-                    
-                    <!-- Google Maps -->
-                    <div class="map-container">
-                        <iframe 
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3401.394474842274!2d74.36682821551539!3d31.550657181302685!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzHCsDMzJzAyLjQiTiA3NMKwMjInMDguNCJF!5e0!3m2!1sen!2s!4v1640000000000!5m2!1sen!2s"
-                            width="100%" 
-                            height="300" 
-                            style="border:0;" 
-                            allowfullscreen="" 
-                            loading="lazy" 
-                            referrerpolicy="no-referrer-when-downgrade"
-                            title="Yaseen Medical Center Location">
-                        </iframe>
-                    </div>
-                </div>
-                
-                <div class="contact-form" data-aos="fade-left">
-                    <form id="contactForm" class="form">
+                <div class="contact-form fade-in-up">
+                    <h3>Send us a Message</h3>
+                    <form>
                         <div class="form-group">
-                            <input type="text" id="name" name="name" required class="form-input" placeholder=" ">
-                            <label for="name" class="form-label">Full Name</label>
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" required>
                         </div>
                         
                         <div class="form-group">
-                            <input type="tel" id="phone" name="phone" required class="form-input" placeholder=" ">
-                            <label for="phone" class="form-label">Phone Number</label>
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required>
                         </div>
                         
                         <div class="form-group">
-                            <input type="email" id="email" name="email" required class="form-input" placeholder=" ">
-                            <label for="email" class="form-label">Email Address</label>
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" required>
                         </div>
                         
                         <div class="form-group">
-                            <textarea id="message" name="message" required class="form-input form-textarea" placeholder=" " rows="5"></textarea>
-                            <label for="message" class="form-label">Message</label>
+                            <label for="service">Service Needed</label>
+                            <select id="service" name="service" style="width: 100%; padding: 15px; border: none; border-radius: 10px; background: white; font-family: 'Poppins', sans-serif;">
+                                <option value="">Select a service</option>
+                                <option value="gynecology">Gynecology</option>
+                                <option value="physiotherapy">Physiotherapy</option>
+                                <option value="pediatrician">Pediatrician</option>
+                                <option value="ultrasound">Ultrasound</option>
+                                <option value="general-physician">General Physician</option>
+                                <option value="general-surgery">General Surgery</option>
+                                <option value="ophthalmology">Ophthalmology</option>
+                                <option value="emergency">Emergency</option>
+                            </select>
                         </div>
                         
-                        <button type="submit" class="submit-btn">
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" placeholder="Tell us about your medical needs or questions..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">
                             <i class="fas fa-paper-plane"></i>
                             Send Message
                         </button>
                     </form>
                 </div>
+                
+                <div class="contact-info fade-in-up">
+                    <h3>Contact Information</h3>
+                    
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Address</h4>
+                            <p>246-Allama Iqbal Road, Dharampura<br>Yaseen Medical Centre</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <i class="fab fa-whatsapp"></i>
+                        <div>
+                            <h4>WhatsApp Appointments</h4>
+                            <p><a href="https://wa.me/923055082811">03055082811</a></p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h4>Operating Hours</h4>
+                            <p>24/7 Emergency Services<br>Always Open for You</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>info@yaseenmedical.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="social-links">
+                        <a href="#" class="social-link facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link youtube"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="social-link tiktok"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section">
+        <div class="map-placeholder">
+            <div style="text-align: center;">
+                <i class="fas fa-map-marked-alt" style="font-size: 3rem; color: var(--primary-blue); margin-bottom: 20px;"></i><br>
+                <strong>246-Allama Iqbal Road, Dharampura</strong><br>
+                <a href="https://maps.google.com" target="_blank" style="color: var(--primary-blue); text-decoration: none;">
+                    <i class="fas fa-external-link-alt"></i> View on Google Maps
+                </a>
             </div>
         </div>
     </section>
@@ -430,75 +1130,189 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <div class="footer-info">
-                    <div class="footer-logo">
-                        <img src="images/logo.png" alt="Yaseen Medical Center Logo" class="logo-img">
-                        <span class="logo-text">Yaseen Medical Center</span>
+                <div class="footer-section">
+                    <h3>Yaseen Medical Center</h3>
+                    <p>Your health is our responsibility, and we are committed to providing the best medical care with advanced technology and experienced professionals.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link youtube"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="social-link tiktok"><i class="fab fa-tiktok"></i></a>
                     </div>
-                    <p class="footer-description">
-                        Professional healthcare services with compassionate care. Your health is our priority.
-                    </p>
                 </div>
                 
-                <div class="footer-links">
-                    <h4>Quick Links</h4>
+                <div class="footer-section">
+                    <h3>Services</h3>
                     <ul>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#about">About Us</a></li>
-                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#services">Gynecology</a></li>
+                        <li><a href="#services">Physiotherapy</a></li>
+                        <li><a href="#services">Pediatrician</a></li>
+                        <li><a href="#services">Ultrasound</a></li>
+                        <li><a href="#services">General Physician</a></li>
+                        <li><a href="#services">General Surgery</a></li>
+                        <li><a href="#services">Ophthalmology</a></li>
                     </ul>
                 </div>
                 
-                <div class="footer-contact">
-                    <h4>Contact Info</h4>
-                    <p><i class="fas fa-map-marker-alt"></i> 246-Allama Iqbal Road, Dharampura</p>
-                    <p><i class="fab fa-whatsapp"></i> 03055082811</p>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#testimonials">Testimonials</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="https://wa.me/923055082811">Book Appointment</a></li>
+                    </ul>
                 </div>
                 
-                <div class="footer-social">
-                    <h4>Follow Us</h4>
-                    <div class="social-links">
-                        <a href="#" class="social-link youtube" aria-label="YouTube">
-                            <i class="fab fa-youtube"></i>
-                        </a>
-                        <a href="#" class="social-link tiktok" aria-label="TikTok">
-                            <i class="fab fa-tiktok"></i>
-                        </a>
-                        <a href="#" class="social-link instagram" aria-label="Instagram">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a href="#" class="social-link twitter" aria-label="X (Twitter)">
-                            <i class="fab fa-x-twitter"></i>
-                        </a>
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <p>246-Allama Iqbal Road<br>Dharampura, Yaseen Medical Centre</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fab fa-whatsapp"></i>
+                        <div>
+                            <p><a href="https://wa.me/923055082811">03055082811</a></p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <p>24/7 Emergency Services</p>
+                        </div>
                     </div>
                 </div>
             </div>
             
             <div class="footer-bottom">
-                <p>&copy; 2024 Yaseen Medical Center. All rights reserved. | Designed with ❤️ for better healthcare</p>
+                <p>&copy; 2024 Yaseen Medical Center. All rights reserved. | Designed with care for your health.</p>
             </div>
         </div>
     </footer>
 
-    <!-- Back to Top Button -->
-    <button id="backToTop" class="back-to-top" aria-label="Back to top">
-        <i class="fas fa-chevron-up"></i>
-    </button>
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/923055082811" class="whatsapp-float" title="Book Appointment via WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
 
-    <!-- JavaScript -->
-    <script src="js/schema.js"></script>
-    <script src="js/main.js"></script>
-    
-    <!-- AOS Animation Library -->
-    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <!-- JavaScript for Animations and Interactions -->
     <script>
-        // Initialize AOS animations
-        AOS.init({
-            duration: 800,
-            easing: 'ease-in-out',
-            once: true,
-            mirror: false
+        // Smooth Scrolling for Navigation Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Header Background Change on Scroll
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(255, 255, 255, 0.98)';
+                header.style.boxShadow = '0 2px 30px rgba(0, 0, 0, 0.15)';
+            } else {
+                header.style.background = 'rgba(255, 255, 255, 0.95)';
+                header.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
+            }
+        });
+
+        // Fade In Animation on Scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all elements with fade-in-up class
+        document.querySelectorAll('.fade-in-up').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Mobile Menu Toggle
+        const mobileToggle = document.querySelector('.mobile-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+
+        mobileToggle.addEventListener('click', function() {
+            navMenu.style.display = navMenu.style.display === 'flex' ? 'none' : 'flex';
+        });
+
+        // Form Submission Handler
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(this);
+            const name = formData.get('name');
+            const phone = formData.get('phone');
+            const service = formData.get('service');
+            const message = formData.get('message');
+            
+            // Create WhatsApp message
+            const whatsappMessage = `Hello! I would like to book an appointment.%0A%0AName: ${name}%0APhone: ${phone}%0AService: ${service}%0AMessage: ${message}`;
+            
+            // Redirect to WhatsApp
+            window.open(`https://wa.me/923055082811?text=${whatsappMessage}`, '_blank');
+            
+            // Show success message
+            alert('Thank you for your inquiry! You will be redirected to WhatsApp to complete your appointment booking.');
+        });
+
+        // Add loading animation to service cards
+        document.querySelectorAll('.service-card').forEach((card, index) => {
+            card.style.animationDelay = `${index * 0.1}s`;
+        });
+
+        // Add hover effect to testimonials
+        document.querySelectorAll('.testimonial-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-5px)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+            });
+        });
+
+        // Animate counters (if you add any statistics)
+        function animateCounters() {
+            const counters = document.querySelectorAll('.counter');
+            counters.forEach(counter => {
+                const target = parseInt(counter.getAttribute('data-target'));
+                const count = parseInt(counter.innerText);
+                const increment = target / 100;
+                
+                if (count < target) {
+                    counter.innerText = Math.ceil(count + increment);
+                    setTimeout(animateCounters, 20);
+                } else {
+                    counter.innerText = target;
+                }
+            });
+        }
+
+        // Initialize animations when page loads
+        window.addEventListener('load', function() {
+            // Add any initialization code here
+            console.log('Yaseen Medical Center website loaded successfully!');
         });
     </script>
 </body>
