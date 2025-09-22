@@ -7,6 +7,11 @@
     <meta name="description" content="Yaseen Medical Center provides 24/7 comprehensive healthcare services including Gynecology, Physiotherapy, Pediatrician, Ultrasound, General Physician, General Surgery, and Ophthalmology.">
     <meta name="keywords" content="Medical Center, Healthcare, 24/7 Emergency, Gynecology, Physiotherapy, Pediatrician, Ultrasound, General Surgery, Ophthalmology, Dharampura">
     
+    <!-- Updated Favicon Links -->
+    <link rel="icon" type="image/png" sizes="16x16" href="images/logos/yaseen-favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/logos/yaseen-favicon-32x32.png">
+    <link rel="shortcut icon" href="images/logos/yaseen-favicon-32x32.png">
+    
     <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
@@ -97,10 +102,9 @@
             text-decoration: none;
         }
         
-        .logo i {
+        .logo img {
+            height: 40px;
             margin-right: 10px;
-            color: var(--accent-green);
-            font-size: 2rem;
         }
         
         .nav-menu {
@@ -151,35 +155,69 @@
             transition: 0.3s;
         }
         
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(135deg, rgba(74, 144, 226, 0.9), rgba(44, 90, 160, 0.9)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><rect fill="%23f0f8ff" width="1200" height="800"/><circle fill="%23e6f3ff" cx="200" cy="200" r="100"/><circle fill="%23cce7ff" cx="600" cy="300" r="150"/><circle fill="%23b3dbff" cx="1000" cy="400" r="120"/></svg>');
-            background-size: cover;
-            background-position: center;
+        /* Hero Slider Styles */
+        .hero-slider {
+            position: relative;
             height: 100vh;
+            overflow: hidden;
+            margin-top: 80px;
+        }
+        
+        .hero-slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+        
+        .hero-slide.active {
+            opacity: 1;
+        }
+        
+        .hero-slide picture {
+            width: 100%;
+            height: 100%;
+        }
+        
+        .hero-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(74, 144, 226, 0.7), rgba(44, 90, 160, 0.7));
             display: flex;
             align-items: center;
             justify-content: center;
-            text-align: center;
-            color: white;
-            position: relative;
-            overflow: hidden;
+            z-index: 2;
         }
         
         .hero-content {
             max-width: 800px;
             padding: 2rem;
+            text-align: center;
+            color: white;
             animation: fadeInUp 1s ease-out;
         }
         
-        .hero h1 {
+        .hero-content h1 {
             font-family: 'Playfair Display', serif;
             font-size: 3.5rem;
             margin-bottom: 1rem;
             font-weight: 700;
         }
         
-        .hero .subtitle {
+        .hero-content .subtitle {
             font-size: 1.2rem;
             margin-bottom: 2rem;
             opacity: 0.9;
@@ -222,28 +260,29 @@
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
         }
         
-        /* Floating Elements Animation */
-        .floating-element {
+        /* Hero Slider Navigation */
+        .slider-indicators {
             position: absolute;
-            opacity: 0.1;
-            animation: float 6s ease-in-out infinite;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 10px;
+            z-index: 3;
         }
         
-        .floating-element:nth-child(1) {
-            top: 20%;
-            left: 10%;
-            animation-delay: 0s;
+        .indicator {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.5);
+            cursor: pointer;
+            transition: all 0.3s ease;
         }
         
-        .floating-element:nth-child(2) {
-            top: 60%;
-            right: 10%;
-            animation-delay: 2s;
-        }
-        
-        @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-20px); }
+        .indicator.active {
+            background: white;
+            transform: scale(1.2);
         }
         
         @keyframes fadeInUp {
@@ -320,6 +359,26 @@
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
         }
         
+        .service-image-wrap {
+            position: relative;
+            width: 100%;
+            padding-top: 75%;
+            overflow: hidden;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            background: #f5f7fb;
+        }
+        
+        .service-image-wrap img {
+            position: absolute;
+            top: 0; 
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        
         .service-icon {
             width: 80px;
             height: 80px;
@@ -328,7 +387,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 0 auto 20px;
+            margin: 20px auto;
             color: white;
             font-size: 2rem;
         }
@@ -677,11 +736,11 @@
                 display: flex;
             }
             
-            .hero h1 {
+            .hero-content h1 {
                 font-size: 2.5rem;
             }
             
-            .hero .subtitle {
+            .hero-content .subtitle {
                 font-size: 1rem;
             }
             
@@ -715,7 +774,7 @@
         }
         
         @media (max-width: 480px) {
-            .hero h1 {
+            .hero-content h1 {
                 font-size: 2rem;
             }
             
@@ -786,7 +845,7 @@
     <header class="header">
         <nav class="nav-container">
             <a href="#home" class="logo">
-                <i class="fas fa-heartbeat"></i>
+                <img src="images/logos/yaseen-logo-primary.svg" alt="Yaseen Medical Center Logo">
                 Yaseen Medical Center
             </a>
             <ul class="nav-menu">
@@ -804,28 +863,55 @@
         </nav>
     </header>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="floating-element">
-            <i class="fas fa-stethoscope" style="font-size: 100px;"></i>
-        </div>
-        <div class="floating-element">
-            <i class="fas fa-heartbeat" style="font-size: 80px;"></i>
+    <!-- Hero Slider Section -->
+    <section id="home" class="hero-slider">
+        <!-- Slide 1 -->
+        <div class="hero-slide active">
+            <picture>
+                <source media="(max-width: 768px)" srcset="images/hero/yaseen-hero-1-mobile.webp">
+                <img src="images/hero/yaseen-hero-1-desktop.webp" alt="Yaseen Medical Center Hero Slide 1">
+            </picture>
         </div>
         
-        <div class="hero-content">
-            <h1>Your Health is Our Concern</h1>
-            <p class="subtitle">Providing world-class medical care with advanced technology and experienced professionals. Available 24/7 for your healthcare needs.</p>
-            <div class="cta-buttons">
-                <a href="https://wa.me/923055082811" class="btn btn-primary">
-                    <i class="fab fa-whatsapp"></i>
-                    Book Appointment
-                </a>
-                <a href="#services" class="btn btn-secondary">
-                    <i class="fas fa-stethoscope"></i>
-                    Our Services
-                </a>
+        <!-- Slide 2 -->
+        <div class="hero-slide">
+            <picture>
+                <source media="(max-width: 768px)" srcset="images/hero/yaseen-hero-2-mobile.webp">
+                <img src="images/hero/yaseen-hero-2-desktop.webp" alt="Yaseen Medical Center Hero Slide 2">
+            </picture>
+        </div>
+        
+        <!-- Slide 3 -->
+        <div class="hero-slide">
+            <picture>
+                <source media="(max-width: 768px)" srcset="images/hero/yaseen-hero-3-mobile.webp">
+                <img src="images/hero/yaseen-hero-3-desktop.webp" alt="Yaseen Medical Center Hero Slide 3">
+            </picture>
+        </div>
+        
+        <!-- Hero Overlay Content -->
+        <div class="hero-overlay">
+            <div class="hero-content">
+                <h1>Your Health is Our Concern</h1>
+                <p class="subtitle">Providing world-class medical care with advanced technology and experienced professionals. Available 24/7 for your healthcare needs.</p>
+                <div class="cta-buttons">
+                    <a href="https://wa.me/923055082811" class="btn btn-primary">
+                        <i class="fab fa-whatsapp"></i>
+                        Book Appointment
+                    </a>
+                    <a href="#services" class="btn btn-secondary">
+                        <i class="fas fa-stethoscope"></i>
+                        Our Services
+                    </a>
+                </div>
             </div>
+        </div>
+        
+        <!-- Slider Indicators -->
+        <div class="slider-indicators">
+            <div class="indicator active" data-slide="0"></div>
+            <div class="indicator" data-slide="1"></div>
+            <div class="indicator" data-slide="2"></div>
         </div>
     </section>
 
@@ -839,6 +925,9 @@
             
             <div class="services-grid">
                 <div class="service-card fade-in-up">
+                    <div class="service-image-wrap">
+                        <img src="images/services/yaseen-gynecology.webp" alt="Gynecology Service at Yaseen Medical Center" loading="lazy">
+                    </div>
                     <div class="service-icon">
                         <i class="fas fa-female"></i>
                     </div>
@@ -847,6 +936,9 @@
                 </div>
                 
                 <div class="service-card fade-in-up">
+                    <div class="service-image-wrap">
+                        <img src="images/services/yaseen-physiotherapy.webp" alt="Physiotherapy Service at Yaseen Medical Center" loading="lazy">
+                    </div>
                     <div class="service-icon">
                         <i class="fas fa-walking"></i>
                     </div>
@@ -855,6 +947,9 @@
                 </div>
                 
                 <div class="service-card fade-in-up">
+                    <div class="service-image-wrap">
+                        <img src="images/services/yaseen-pediatrician.webp" alt="Pediatrician Service at Yaseen Medical Center" loading="lazy">
+                    </div>
                     <div class="service-icon">
                         <i class="fas fa-baby"></i>
                     </div>
@@ -863,6 +958,9 @@
                 </div>
                 
                 <div class="service-card fade-in-up">
+                    <div class="service-image-wrap">
+                        <img src="images/services/yaseen-ultrasound.webp" alt="Ultrasound Service at Yaseen Medical Center" loading="lazy">
+                    </div>
                     <div class="service-icon">
                         <i class="fas fa-heartbeat"></i>
                     </div>
@@ -871,6 +969,9 @@
                 </div>
                 
                 <div class="service-card fade-in-up">
+                    <div class="service-image-wrap">
+                        <img src="images/services/yaseen-general-physician.webp" alt="General Physician Service at Yaseen Medical Center" loading="lazy">
+                    </div>
                     <div class="service-icon">
                         <i class="fas fa-user-md"></i>
                     </div>
@@ -879,6 +980,9 @@
                 </div>
                 
                 <div class="service-card fade-in-up">
+                    <div class="service-image-wrap">
+                        <img src="images/services/yaseen-general-surgery.webp" alt="General Surgery Service at Yaseen Medical Center" loading="lazy">
+                    </div>
                     <div class="service-icon">
                         <i class="fas fa-cut"></i>
                     </div>
@@ -887,6 +991,9 @@
                 </div>
                 
                 <div class="service-card fade-in-up">
+                    <div class="service-image-wrap">
+                        <img src="images/services/yaseen-ophthalmologist.webp" alt="Ophthalmologist Service at Yaseen Medical Center" loading="lazy">
+                    </div>
                     <div class="service-icon">
                         <i class="fas fa-eye"></i>
                     </div>
@@ -1228,6 +1335,38 @@
             }
         });
 
+        // Hero Slider Functionality
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.hero-slide');
+        const indicators = document.querySelectorAll('.indicator');
+        const totalSlides = slides.length;
+
+        function showSlide(index) {
+            // Remove active class from all slides and indicators
+            slides.forEach(slide => slide.classList.remove('active'));
+            indicators.forEach(indicator => indicator.classList.remove('active'));
+            
+            // Add active class to current slide and indicator
+            slides[index].classList.add('active');
+            indicators[index].classList.add('active');
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            showSlide(currentSlide);
+        }
+
+        // Auto-advance slider every 3 seconds
+        setInterval(nextSlide, 3000);
+
+        // Manual slide navigation
+        indicators.forEach((indicator, index) => {
+            indicator.addEventListener('click', () => {
+                currentSlide = index;
+                showSlide(currentSlide);
+            });
+        });
+
         // Fade In Animation on Scroll
         const observerOptions = {
             threshold: 0.1,
@@ -1292,26 +1431,8 @@
             });
         });
 
-        // Animate counters (if you add any statistics)
-        function animateCounters() {
-            const counters = document.querySelectorAll('.counter');
-            counters.forEach(counter => {
-                const target = parseInt(counter.getAttribute('data-target'));
-                const count = parseInt(counter.innerText);
-                const increment = target / 100;
-                
-                if (count < target) {
-                    counter.innerText = Math.ceil(count + increment);
-                    setTimeout(animateCounters, 20);
-                } else {
-                    counter.innerText = target;
-                }
-            });
-        }
-
         // Initialize animations when page loads
         window.addEventListener('load', function() {
-            // Add any initialization code here
             console.log('Yaseen Medical Center website loaded successfully!');
         });
     </script>
