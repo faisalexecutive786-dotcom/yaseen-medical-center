@@ -7,11 +7,6 @@
     <meta name="description" content="Yaseen Medical Center provides 24/7 comprehensive healthcare services including Gynecology, Physiotherapy, Pediatrician, Ultrasound, General Physician, General Surgery, and Ophthalmology.">
     <meta name="keywords" content="Medical Center, Healthcare, 24/7 Emergency, Gynecology, Physiotherapy, Pediatrician, Ultrasound, General Surgery, Ophthalmology, Dharampura">
     
-    <!-- Updated Favicon Links -->
-    <link rel="icon" type="image/png" sizes="16x16" href="images/logos/yaseen-favicon-16x16.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="images/logos/yaseen-favicon-32x32.png">
-    <link rel="shortcut icon" href="images/logos/yaseen-favicon-32x32.png">
-    
     <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
@@ -102,9 +97,11 @@
             text-decoration: none;
         }
         
-        .logo img {
+        .logo-icon {
+            width: 40px;
             height: 40px;
             margin-right: 10px;
+            border-radius: 50%;
         }
         
         .nav-menu {
@@ -155,72 +152,50 @@
             transition: 0.3s;
         }
         
-        /* Hero Slider Styles */
-        .hero-slider {
-            position: relative;
+        /* Hero Section */
+        .hero {
             height: 100vh;
-            overflow: hidden;
-            margin-top: 80px;
-        }
-        
-        .hero-slide {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            opacity: 0;
-            transition: opacity 1s ease-in-out;
-        }
-        
-        .hero-slide.active {
-            opacity: 1;
-        }
-        
-        .hero-slide picture {
-            width: 100%;
-            height: 100%;
-        }
-        
-        .hero-slide img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-        }
-        
-        .hero-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(135deg, rgba(74, 144, 226, 0.7), rgba(44, 90, 160, 0.7));
             display: flex;
             align-items: center;
             justify-content: center;
-            z-index: 2;
+            text-align: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4));
+        }
+        
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
         }
         
         .hero-content {
             max-width: 800px;
             padding: 2rem;
-            text-align: center;
-            color: white;
             animation: fadeInUp 1s ease-out;
+            position: relative;
+            z-index: 2;
         }
         
-        .hero-content h1 {
+        .hero h1 {
             font-family: 'Playfair Display', serif;
             font-size: 3.5rem;
             margin-bottom: 1rem;
             font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
         }
         
-        .hero-content .subtitle {
+        .hero .subtitle {
             font-size: 1.2rem;
             margin-bottom: 2rem;
             opacity: 0.9;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
         }
         
         .cta-buttons {
@@ -258,31 +233,6 @@
         .btn:hover {
             transform: translateY(-3px);
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-        }
-        
-        /* Hero Slider Navigation */
-        .slider-indicators {
-            position: absolute;
-            bottom: 30px;
-            left: 50%;
-            transform: translateX(-50%);
-            display: flex;
-            gap: 10px;
-            z-index: 3;
-        }
-        
-        .indicator {
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.5);
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-        
-        .indicator.active {
-            background: white;
-            transform: scale(1.2);
         }
         
         @keyframes fadeInUp {
@@ -329,29 +279,17 @@
         
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             gap: 30px;
         }
         
         .service-card {
             background: white;
-            padding: 40px 30px;
             border-radius: 20px;
-            text-align: center;
+            overflow: hidden;
             box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
             transition: all 0.3s ease;
             position: relative;
-            overflow: hidden;
-        }
-        
-        .service-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 4px;
-            background: var(--gradient-accent);
         }
         
         .service-card:hover {
@@ -359,48 +297,42 @@
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
         }
         
-        .service-image-wrap {
-            position: relative;
+        .service-image {
             width: 100%;
-            padding-top: 75%;
-            overflow: hidden;
-            border-radius: 15px;
-            margin-bottom: 20px;
-            background: #f5f7fb;
-        }
-        
-        .service-image-wrap img {
-            position: absolute;
-            top: 0; 
-            left: 0;
-            width: 100%;
-            height: 100%;
+            height: 250px;
             object-fit: cover;
-            display: block;
         }
         
-        .service-icon {
-            width: 80px;
-            height: 80px;
-            background: var(--gradient-primary);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 20px auto;
-            color: white;
-            font-size: 2rem;
+        .service-content {
+            padding: 30px;
+            text-align: center;
         }
         
-        .service-card h3 {
-            font-size: 1.3rem;
+        .service-content h3 {
+            font-size: 1.5rem;
             color: var(--deep-navy);
             margin-bottom: 15px;
         }
         
-        .service-card p {
+        .service-content p {
             color: #666;
             line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        
+        .service-btn {
+            background: var(--gradient-primary);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        .service-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(74, 144, 226, 0.3);
         }
         
         /* About Section */
@@ -463,6 +395,24 @@
             color: white;
             text-align: center;
             padding: 80px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .emergency-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.2;
+            z-index: 1;
+        }
+        
+        .emergency-content {
+            position: relative;
+            z-index: 2;
         }
         
         .emergency h2 {
@@ -586,7 +536,8 @@
         }
         
         .form-group input,
-        .form-group textarea {
+        .form-group textarea,
+        .form-group select {
             width: 100%;
             padding: 15px;
             border: none;
@@ -598,7 +549,8 @@
         }
         
         .form-group input:focus,
-        .form-group textarea:focus {
+        .form-group textarea:focus,
+        .form-group select:focus {
             outline: none;
             border-color: var(--primary-blue);
             box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.1);
@@ -736,11 +688,11 @@
                 display: flex;
             }
             
-            .hero-content h1 {
+            .hero h1 {
                 font-size: 2.5rem;
             }
             
-            .hero-content .subtitle {
+            .hero .subtitle {
                 font-size: 1rem;
             }
             
@@ -774,7 +726,7 @@
         }
         
         @media (max-width: 480px) {
-            .hero-content h1 {
+            .hero h1 {
                 font-size: 2rem;
             }
             
@@ -845,7 +797,7 @@
     <header class="header">
         <nav class="nav-container">
             <a href="#home" class="logo">
-                <img src="images/logos/yaseen-logo-primary.svg" alt="Yaseen Medical Center Logo">
+                <img src="https://page.gensparksite.com/v1/base64_upload/35b4d999990d272d3fa566c941f2e129" alt="Yaseen Medical Center Logo" class="logo-icon">
                 Yaseen Medical Center
             </a>
             <ul class="nav-menu">
@@ -863,55 +815,23 @@
         </nav>
     </header>
 
-    <!-- Hero Slider Section -->
-    <section id="home" class="hero-slider">
-        <!-- Slide 1 -->
-        <div class="hero-slide active">
-            <picture>
-                <source media="(max-width: 768px)" srcset="images/hero/yaseen-hero-1-mobile.webp">
-                <img src="images/hero/yaseen-hero-1-desktop.webp" alt="Yaseen Medical Center Hero Slide 1">
-            </picture>
-        </div>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <img src="https://page.gensparksite.com/v1/base64_upload/fb882a3609fabe80cc264570637ea458" alt="Yaseen Medical Center" class="hero-bg">
         
-        <!-- Slide 2 -->
-        <div class="hero-slide">
-            <picture>
-                <source media="(max-width: 768px)" srcset="images/hero/yaseen-hero-2-mobile.webp">
-                <img src="images/hero/yaseen-hero-2-desktop.webp" alt="Yaseen Medical Center Hero Slide 2">
-            </picture>
-        </div>
-        
-        <!-- Slide 3 -->
-        <div class="hero-slide">
-            <picture>
-                <source media="(max-width: 768px)" srcset="images/hero/yaseen-hero-3-mobile.webp">
-                <img src="images/hero/yaseen-hero-3-desktop.webp" alt="Yaseen Medical Center Hero Slide 3">
-            </picture>
-        </div>
-        
-        <!-- Hero Overlay Content -->
-        <div class="hero-overlay">
-            <div class="hero-content">
-                <h1>Your Health is Our Concern</h1>
-                <p class="subtitle">Providing world-class medical care with advanced technology and experienced professionals. Available 24/7 for your healthcare needs.</p>
-                <div class="cta-buttons">
-                    <a href="https://wa.me/923055082811" class="btn btn-primary">
-                        <i class="fab fa-whatsapp"></i>
-                        Book Appointment
-                    </a>
-                    <a href="#services" class="btn btn-secondary">
-                        <i class="fas fa-stethoscope"></i>
-                        Our Services
-                    </a>
-                </div>
+        <div class="hero-content">
+            <h1>Your Health is Our Concern</h1>
+            <p class="subtitle">Providing world-class medical care with advanced technology and experienced professionals. Available 24/7 for your healthcare needs.</p>
+            <div class="cta-buttons">
+                <a href="https://wa.me/923055082811" class="btn btn-primary">
+                    <i class="fab fa-whatsapp"></i>
+                    Book Appointment
+                </a>
+                <a href="#services" class="btn btn-secondary">
+                    <i class="fas fa-stethoscope"></i>
+                    Our Services
+                </a>
             </div>
-        </div>
-        
-        <!-- Slider Indicators -->
-        <div class="slider-indicators">
-            <div class="indicator active" data-slide="0"></div>
-            <div class="indicator" data-slide="1"></div>
-            <div class="indicator" data-slide="2"></div>
         </div>
     </section>
 
@@ -925,80 +845,66 @@
             
             <div class="services-grid">
                 <div class="service-card fade-in-up">
-                    <div class="service-image-wrap">
-                        <img src="images/services/yaseen-gynecology.webp" alt="Gynecology Service at Yaseen Medical Center" loading="lazy">
+                    <img src="https://page.gensparksite.com/v1/base64_upload/a1c76817acbc500318713856cb064efb" alt="Gynecology Services" class="service-image">
+                    <div class="service-content">
+                        <h3>Gynecology</h3>
+                        <p>Comprehensive women's health services including routine check-ups, prenatal care, and specialized gynecological treatments.</p>
+                        <a href="https://wa.me/923055082811?text=I would like to book an appointment for Gynecology services" class="service-btn">Book Now</a>
                     </div>
-                    <div class="service-icon">
-                        <i class="fas fa-female"></i>
-                    </div>
-                    <h3>Gynecology</h3>
-                    <p>Comprehensive women's health services including routine check-ups, prenatal care, and specialized gynecological treatments.</p>
                 </div>
                 
                 <div class="service-card fade-in-up">
-                    <div class="service-image-wrap">
-                        <img src="images/services/yaseen-physiotherapy.webp" alt="Physiotherapy Service at Yaseen Medical Center" loading="lazy">
+                    <img src="https://page.gensparksite.com/v1/base64_upload/0306159c24662ffde990b9f3410dfb2f" alt="Physiotherapy Services" class="service-image">
+                    <div class="service-content">
+                        <h3>Physiotherapy</h3>
+                        <p>Professional rehabilitation services to help you recover from injuries, manage pain, and improve mobility and strength.</p>
+                        <a href="https://wa.me/923055082811?text=I would like to book an appointment for Physiotherapy services" class="service-btn">Book Now</a>
                     </div>
-                    <div class="service-icon">
-                        <i class="fas fa-walking"></i>
-                    </div>
-                    <h3>Physiotherapy</h3>
-                    <p>Professional rehabilitation services to help you recover from injuries, manage pain, and improve mobility and strength.</p>
                 </div>
                 
                 <div class="service-card fade-in-up">
-                    <div class="service-image-wrap">
-                        <img src="images/services/yaseen-pediatrician.webp" alt="Pediatrician Service at Yaseen Medical Center" loading="lazy">
+                    <img src="https://page.gensparksite.com/v1/base64_upload/43fd89be278f5f4237711c692c980ca6" alt="Pediatrician Services" class="service-image">
+                    <div class="service-content">
+                        <h3>Pediatrician</h3>
+                        <p>Specialized medical care for infants, children, and adolescents, focusing on their physical, emotional, and social health.</p>
+                        <a href="https://wa.me/923055082811?text=I would like to book an appointment for Pediatrician services" class="service-btn">Book Now</a>
                     </div>
-                    <div class="service-icon">
-                        <i class="fas fa-baby"></i>
-                    </div>
-                    <h3>Pediatrician</h3>
-                    <p>Specialized medical care for infants, children, and adolescents, focusing on their physical, emotional, and social health.</p>
                 </div>
                 
                 <div class="service-card fade-in-up">
-                    <div class="service-image-wrap">
-                        <img src="images/services/yaseen-ultrasound.webp" alt="Ultrasound Service at Yaseen Medical Center" loading="lazy">
+                    <img src="https://page.gensparksite.com/v1/base64_upload/a76b5c86ee13a74962c48d6596e3e2d6" alt="Ultrasound Services" class="service-image">
+                    <div class="service-content">
+                        <h3>Ultrasound</h3>
+                        <p>Advanced diagnostic imaging services using state-of-the-art ultrasound technology for accurate medical assessments.</p>
+                        <a href="https://wa.me/923055082811?text=I would like to book an appointment for Ultrasound services" class="service-btn">Book Now</a>
                     </div>
-                    <div class="service-icon">
-                        <i class="fas fa-heartbeat"></i>
-                    </div>
-                    <h3>Ultrasound</h3>
-                    <p>Advanced diagnostic imaging services using state-of-the-art ultrasound technology for accurate medical assessments.</p>
                 </div>
                 
                 <div class="service-card fade-in-up">
-                    <div class="service-image-wrap">
-                        <img src="images/services/yaseen-general-physician.webp" alt="General Physician Service at Yaseen Medical Center" loading="lazy">
+                    <img src="https://page.gensparksite.com/v1/base64_upload/7f3a6797416d8ed964baf3a67d211a45" alt="General Physician Services" class="service-image">
+                    <div class="service-content">
+                        <h3>General Physician</h3>
+                        <p>Primary healthcare services including routine check-ups, health screenings, and treatment of common medical conditions.</p>
+                        <a href="https://wa.me/923055082811?text=I would like to book an appointment for General Physician services" class="service-btn">Book Now</a>
                     </div>
-                    <div class="service-icon">
-                        <i class="fas fa-user-md"></i>
-                    </div>
-                    <h3>General Physician</h3>
-                    <p>Primary healthcare services including routine check-ups, health screenings, and treatment of common medical conditions.</p>
                 </div>
                 
                 <div class="service-card fade-in-up">
-                    <div class="service-image-wrap">
-                        <img src="images/services/yaseen-general-surgery.webp" alt="General Surgery Service at Yaseen Medical Center" loading="lazy">
+                    <img src="https://page.gensparksite.com/v1/base64_upload/c3cc7e41aa6645e58a2557d033d26d6b" alt="General Surgery Services" class="service-image">
+                    <div class="service-content">
+                        <h3>General Surgery</h3>
+                        <p>Surgical procedures performed by experienced surgeons using modern techniques and equipment in a safe environment.</p>
+                        <a href="https://wa.me/923055082811?text=I would like to book an appointment for General Surgery services" class="service-btn">Book Now</a>
                     </div>
-                    <div class="service-icon">
-                        <i class="fas fa-cut"></i>
-                    </div>
-                    <h3>General Surgery</h3>
-                    <p>Surgical procedures performed by experienced surgeons using modern techniques and equipment in a safe environment.</p>
                 </div>
                 
                 <div class="service-card fade-in-up">
-                    <div class="service-image-wrap">
-                        <img src="images/services/yaseen-ophthalmologist.webp" alt="Ophthalmologist Service at Yaseen Medical Center" loading="lazy">
+                    <img src="https://page.gensparksite.com/v1/base64_upload/787b034451fc63e0002b1c1f5758f7ac" alt="Ophthalmology Services" class="service-image">
+                    <div class="service-content">
+                        <h3>Ophthalmology</h3>
+                        <p>Comprehensive eye care services including eye examinations, vision testing, and treatment of eye-related conditions.</p>
+                        <a href="https://wa.me/923055082811?text=I would like to book an appointment for Ophthalmology services" class="service-btn">Book Now</a>
                     </div>
-                    <div class="service-icon">
-                        <i class="fas fa-eye"></i>
-                    </div>
-                    <h3>Ophthalmology</h3>
-                    <p>Comprehensive eye care services including eye examinations, vision testing, and treatment of eye-related conditions.</p>
                 </div>
             </div>
         </div>
@@ -1029,7 +935,7 @@
                 </div>
                 
                 <div class="about-image fade-in-up">
-                    <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Medical Team at Yaseen Medical Center">
+                    <img src="https://page.gensparksite.com/v1/base64_upload/68f92e52e92722849a93ea59ec12bdd7" alt="Yaseen Medical Center Team">
                 </div>
             </div>
         </div>
@@ -1037,34 +943,47 @@
 
     <!-- Emergency Section -->
     <section class="emergency">
+        <img src="https://page.gensparksite.com/v1/base64_upload/a9086728720291c15ce9d817ca38b2d3" alt="24/7 Emergency Services" class="emergency-bg">
+        
         <div class="container">
-            <h2>24/7 Emergency Care Available</h2>
-            <p>Professional care, wherever you need it. Our emergency services are always ready to provide immediate medical attention when you need it most.</p>
-            
-            <div class="emergency-contact">
-                <div class="contact-item">
-                    <i class="fas fa-phone-alt"></i>
-                    <div>
-                        <strong>Emergency Hotline</strong><br>
-                        Available 24/7
-                    </div>
-                </div>
+            <div class="emergency-content">
+                <h2>24/7 Emergency Care Available</h2>
+                <p>Professional care, wherever you need it. Our emergency services are always ready to provide immediate medical attention when you need it most.</p>
                 
-                <div class="contact-item">
-                    <i class="fab fa-whatsapp"></i>
-                    <div>
-                        <strong>WhatsApp</strong><br>
-                        03055082811
+                <div class="emergency-contact">
+                    <div class="contact-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <div>
+                            <strong>Emergency Hotline</strong><br>
+                            Available 24/7
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fab fa-whatsapp"></i>
+                        <div>
+                            <strong>WhatsApp</strong><br>
+                            03055082811
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-ambulance"></i>
+                        <div>
+                            <strong>Ambulance Service</strong><br>
+                            Rapid Response
+                        </div>
                     </div>
                 </div>
-                
-                <div class="contact-item">
-                    <i class="fas fa-ambulance"></i>
-                    <div>
-                        <strong>Ambulance Service</strong><br>
-                        Rapid Response
-                    </div>
-                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hospital Services Banner -->
+    <section class="hospital-banner" style="padding: 60px 0; background: var(--soft-gray);">
+        <div class="container">
+            <div style="text-align: center;">
+                <img src="https://page.gensparksite.com/v1/base64_upload/2536a905e40eaae46097150157cf113b" alt="Hospital Services" style="max-width: 100%; height: auto; border-radius: 20px; box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);">
             </div>
         </div>
     </section>
@@ -1149,7 +1068,7 @@
                         
                         <div class="form-group">
                             <label for="service">Service Needed</label>
-                            <select id="service" name="service" style="width: 100%; padding: 15px; border: none; border-radius: 10px; background: white; font-family: 'Poppins', sans-serif;">
+                            <select id="service" name="service">
                                 <option value="">Select a service</option>
                                 <option value="gynecology">Gynecology</option>
                                 <option value="physiotherapy">Physiotherapy</option>
@@ -1333,38 +1252,6 @@
                 header.style.background = 'rgba(255, 255, 255, 0.95)';
                 header.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
             }
-        });
-
-        // Hero Slider Functionality
-        let currentSlide = 0;
-        const slides = document.querySelectorAll('.hero-slide');
-        const indicators = document.querySelectorAll('.indicator');
-        const totalSlides = slides.length;
-
-        function showSlide(index) {
-            // Remove active class from all slides and indicators
-            slides.forEach(slide => slide.classList.remove('active'));
-            indicators.forEach(indicator => indicator.classList.remove('active'));
-            
-            // Add active class to current slide and indicator
-            slides[index].classList.add('active');
-            indicators[index].classList.add('active');
-        }
-
-        function nextSlide() {
-            currentSlide = (currentSlide + 1) % totalSlides;
-            showSlide(currentSlide);
-        }
-
-        // Auto-advance slider every 3 seconds
-        setInterval(nextSlide, 3000);
-
-        // Manual slide navigation
-        indicators.forEach((indicator, index) => {
-            indicator.addEventListener('click', () => {
-                currentSlide = index;
-                showSlide(currentSlide);
-            });
         });
 
         // Fade In Animation on Scroll
